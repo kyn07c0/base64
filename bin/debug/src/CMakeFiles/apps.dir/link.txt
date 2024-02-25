@@ -1,1 +1,0 @@
-/usr/bin/g++-12  -std=c++17 -O3 -fsized-deallocation -Wall -g -rdynamic CMakeFiles/apps.dir/main.cpp.o -o apps 

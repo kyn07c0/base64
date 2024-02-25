@@ -1,1 +1,0 @@
-/usr/bin/g++-12  -fsized-deallocation -Wall -O2 -rdynamic CMakeFiles/base64.dir/main.cpp.o -o base64 
