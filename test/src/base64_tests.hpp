@@ -39,6 +39,18 @@ void TestEncodeRemainderTwoBytes()
     ASSERT(res.substr(res.length()-2) == "==")
 }
 
+void TestStringEncode()
+{
+    ASSERT_EQUAL(base64::encode("Result string Base64 without symbols =."),
+                 "UmVzdWx0IHN0cmluZyBCYXNlNjQgd2l0aG91dCBzeW1ib2xzID0u");
+    
+    ASSERT_EQUAL(base64::encode("Result string Base64 with symbol =."),
+                 "UmVzdWx0IHN0cmluZyBCYXNlNjQgd2l0aCBzeW1ib2wgPS4=");
+    
+    ASSERT_EQUAL(base64::encode("Result string Base64 with symbols ==."),
+                 "UmVzdWx0IHN0cmluZyBCYXNlNjQgd2l0aCBzeW1ib2xzID09Lg==");
+}
+
 void TestEncodeAndDecodeFile()
 {
     std::ofstream file("test.txt");
