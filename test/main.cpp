@@ -8,6 +8,7 @@ int main()
     RUN_TEST(tr, TestEncodeBytesMultipliesOfThree);
     RUN_TEST(tr, TestEncodeRemainderOneByte);
     RUN_TEST(tr, TestEncodeRemainderTwoBytes);
+    RUN_TEST(tr, TestStringEncode);
     RUN_TEST(tr, TestEncodeAndDecodeFile);
     
     return 0;
