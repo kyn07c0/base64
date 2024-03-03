@@ -56,8 +56,11 @@ void TestStringDecode()
     ASSERT_EQUAL(base64::decode_str("UmVzdWx0IHN0cmluZyBCYXNlNjQgd2l0aG91dCBzeW1ib2xzID0u"),
                  "Result string Base64 without symbols =.")
     
-    ASSERT_EQUAL(base64::encode("Result string Base64 with symbols ==."),
-                 "UmVzdWx0IHN0cmluZyBCYXNlNjQgd2l0aCBzeW1ib2xzID09Lg==");
+    ASSERT_EQUAL(base64::decode_str("UmVzdWx0IHN0cmluZyBCYXNlNjQgd2l0aCBzeW1ib2wgPS4="),
+                 "Result string Base64 with symbol =.")
+    
+    ASSERT_EQUAL(base64::decode_str("UmVzdWx0IHN0cmluZyBCYXNlNjQgd2l0aCBzeW1ib2xzID09Lg=="),
+                 "Result string Base64 with symbols ==.")
 }
 
 void TestEncodeAndDecodeFile()
