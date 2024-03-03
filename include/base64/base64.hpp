@@ -42,7 +42,7 @@ namespace base64 {
         const unsigned long remaining_chars = size - size_groups;
         if(remaining_chars == 2)
         {
-            const std::vector<char> base64_symbols = encode_group(buffer[size-1], buffer[size], 0x00);
+            const std::vector<char> base64_symbols = encode_group(buffer[size-2], buffer[size-1], 0x00);
     
             str_base64.push_back(base64_symbols[0]);
             str_base64.push_back(base64_symbols[1]);
