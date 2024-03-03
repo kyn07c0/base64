@@ -141,6 +141,13 @@ namespace base64 {
         return result;
     }
     
+    std::string decode_str(const std::string& str_base64)
+    {
+        std::vector<uint8_t> vec_str = decode(str_base64);
+        std::string str(vec_str.begin(), vec_str.end());
+        return str;
+    }
+    
     void decode_file(const std::string& str_base64, const std::string& filename)
     {
         try
