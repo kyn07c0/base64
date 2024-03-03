@@ -1,3 +1,10 @@
+## Table of Contents
+- [Description](#description)
+- [Prerequisites](#prerequisites)
+- [Usage](#usage)
+- [Base64 algorithm](#base64_algorithm)
+
+<a name="description"></a>
 ## Description
 This is a simple header-only library for encoding and decoding strings or files using the Base64 algorithm.
 To start using the library, place the base64.hpp file in your project, adding the following directive:
@@ -5,6 +12,7 @@ To start using the library, place the base64.hpp file in your project, adding th
 #include "base64.hpp"
 ```
 
+<a name="prerequisites"></a>
 ## Prerequisites
 C++17 or higher
 
@@ -49,6 +57,7 @@ int main()
 }
 ```
 
+<a name="base64_algorithm"></a>
 ## Base64 algorithm
 The encoding got its name from the representation of binary data in 64 ASCII characters:
 ```
