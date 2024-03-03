@@ -3,6 +3,8 @@
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)
 - [Base64 algorithm](#base64_algorithm)
+  - [Encoding algorithm](#encoding_algorithm)
+  - [Decoding algorithm](#decoding_algorithm)
 
 <a name="description"></a>
 ## Description
@@ -67,7 +69,8 @@ g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,
 w,x,y,z,0,1,2,3,4,5,6,7,8,9,+,/
 ```
 
-### Base64 encoding algorithm
+<a name="encoding_algorithm"></a>
+### Encoding algorithm
 Divide a sequence of bytes into groups of three bytes. There are 3 possible cases:
 - the number of bytes is a multiple of 3 (all groups are 3 bytes);
 - the number of bytes is not a multiple of 3 (the last group has 2 bytes);
@@ -94,7 +97,8 @@ Example of processing a group with 1 byte (11010011)
 4) Map the decimal value to the Base64 character position, preserving their order (0w).
 5) Get a 4-character Base64 string by adding two "=" characters to it (0w==).
 
-### Base64 decoding algorithm
+<a name="decoding_algorithm"></a>
+### Decoding algorithm
 Split the Base64 string into groups of 4 characters. There are 3 options for such groups:
 - without the "=" sign;
 - with one "=" symbol at the end;
