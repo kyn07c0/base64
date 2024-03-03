@@ -62,7 +62,7 @@ namespace base64 {
         return str_base64;
     }
     
-    std::string encode(const std::string& str)
+    std::string encode_str(const std::string& str)
     {
         return encode(std::vector<uint8_t>{str.begin(), str.end()});
     }
